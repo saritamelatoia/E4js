@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea {
+    margin: 0;
+
+}
+
+
+body {
+background: url(./fondopokemon.jpg);
+
+}
+
+.input-container {
+display: flex;
+flex-direction: column;
+margin: 40px;
+gap: 20px;
+
+}
+
+.pokemon{
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 20px;
+
+
+}
+
+.contenedor-render {
+    position: relative;
+    width: 500px;
+    height: 520px;
+    background-color: rgba(255, 255, 255, 0.471);
+    color: #360846;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: auto;
+    /* justify-content: center;
+    background-color: rgba(47, 82, 255, 0.382);
+    width: 100vh;
+    margin:auto;
+    text-align: center; */
+}
+.contenedor-render::before,
+.contenedor-render::after{
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    background: linear-gradient(45deg, red, yellow, green, blue, purple);
+    z-index: -1;
+    background-size: 400%;
+    animation: borderbg 40s linear infinite;
+}
+
+@keyframes borderbg {
+    0%{
+        background-position: 0 0 ;
+
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.contenedor-render::after{
+    filter: blur(40px);
+}
+
+.buscar-input {
+margin: 20px;
+width: 50vh;
+margin: auto;
+
+}
+
+
+
+.pokemon-img{
+    width: 50vh;
+}
+
+.boton {
+    margin:auto;
+    padding: 10px;
+}
